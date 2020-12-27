@@ -10,7 +10,7 @@ const MongoClient = require('mongodb').MongoClient;
 const ObjectID    = require('mongodb').ObjectID;
 const assert      = require('assert');
 
-const mongourl    ='mongodb+srv://admin:admin@cluster0.pynpv.mongodb.net/test?retryWrites=true&w=majority';
+const mongourl    ='';
 const dbName      = 'test';
 
 var username='';
