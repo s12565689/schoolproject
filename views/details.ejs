@@ -1,0 +1,37 @@
+<html>
+    <body>  
+        <H2>RESTAURANT DETAILS</H2>
+        Created by:<%=restaurants.owner %> <br>
+        Restaurants Name:<%=restaurants.name %>    <br>
+                 Borough:<%=restaurants.borough %> <br>
+                 Cuisine:<%=restaurants.cuisine %> <br>
+                  Street:<%=restaurants.address.street %>    <br>
+                Building:<%=restaurants.address.building %>  <br>
+                Zipcode :<%=restaurants.address.zipcode %>   <br>
+         GPS Coordinates:[ <%=restaurants.address.coord.gpslon%>,<%=restaurants.address.coord.gpslat%>] <br>
+   
+    photo:<br>
+   <% if (restaurants.photo) { %>
+    <img src="data:image/jpg;base64,<%=restaurants.photo%>">
+    <%}%> <br> 
+    
+   
+     RATE:<br>
+     <% if (restaurants.grade) { %>
+        <ul>
+            <% for (var r of restaurants.grade){%>
+                <li>User:<%=r.user%>" Score:<%=r.score %> </a></li>
+            <%}%>
+        </ul>
+        <%}%> <br> 
+        <% if (restaurants.address.coord) { %>
+            <a href="/map?lat=<%=restaurants.address.coord.gpslat%>&lon=<%=restaurants.address.coord.gpslon%>">MAP</a>  
+            <%}%>
+        
+    <a href="/edit?_id=<%=restaurants._id %>">Edit</a>  
+    <a href="/rate?_id=<%=restaurants._id %>">Rate</a>  
+    <a href="/delete?_id=<%=restaurants._id %>">Delete</a>  
+    <a href="/main">Home</a>
+
+    </body>
+</html>

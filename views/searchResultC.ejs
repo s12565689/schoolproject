@@ -1,0 +1,12 @@
+<html>
+    <body>
+    <h1>SEARCH </h1>
+
+     Search by Cuisine:<br>
+     <ul>
+        <% for (var sc of scuisine){%>
+            <li>Restaurant Name:<a href="/details?_id=<%=sc._id %>"> <%=sc.name %> Borough:<%=sc.borough %> </a></li>
+        <%}%>
+    </ul>
+    </body>
+</html>

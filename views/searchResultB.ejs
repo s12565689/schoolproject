@@ -1,0 +1,13 @@
+<html>
+    <body>
+    <h1>SEARCH </h1>
+     Search by Borough:<br>
+     <ul>
+        <% for (var sb of sborough){%>
+            <li>Restaurant Name:<a href="/details?_id=<%=sb._id %>"> <%=sb.name %> Borough:<%=sb.borough %> </a></li>
+        <%}%>
+    </ul>
+     Search by Cuisine:<br>
+    
+    </body>
+</html>

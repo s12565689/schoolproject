@@ -1,0 +1,15 @@
+<html>
+    <body>
+    <h1>SEARCH </h1>
+    Search by Name:<br>
+    <ul>
+        <% for (var s of sname){%>
+            <li>Restaurant Name:<a href="/details?_id=<%=s._id %>"> </a><%=s.name %></li>
+        <%}%>
+    </ul>
+    <br>
+     
+     Search by Cuisine:<br>
+    
+    </body>
+</html>
