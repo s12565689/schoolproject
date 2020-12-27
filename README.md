@@ -1,2 +1,1 @@
-# restaurantproject
-# restaurantproject1
+# schoolproject
